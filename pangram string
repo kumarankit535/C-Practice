@@ -1,0 +1,23 @@
+Quest. #01:-  Check whether a string is pangram or not.
+--------------------------------------------------------
+Program:- 
+---------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+namespace Demo {
+   public class Program {
+      public static void Main(string []arg) {
+         string str = "The quick brown fox jumps over the lazy dog";
+         Console.WriteLine("{0}: \"{1}\" is pangram", checkPangram(str), str);
+         Console.ReadKey();
+      }
+      static bool checkPangram(string str) {
+         return str.ToLower().Where(ch => Char.IsLetter(ch)).GroupBy(ch => ch).Count() == 26;
+      }
+   }
+}
+--------------------------------------
+Output:- 
+True: "The quick brown fox jumps over the lazy dog" is pangram
