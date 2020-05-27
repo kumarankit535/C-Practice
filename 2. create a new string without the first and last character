@@ -1,0 +1,33 @@
+# Quest. :-
+-----------
+-> Write a C# Sharp program to create a new string without the first and last character of a given string of length atleast two.
+
+input:-
+---------
+-> dsfghjk
+---------
+
+# Program:-
+---------
+using System;
+public class Exercise1
+{
+    public static void Main( )
+    {
+        string abc;
+        int p;
+        abc= Console.ReadLine();
+        p= int.Parse(Console.ReadLine());
+        
+         System.Console.WriteLine(removep(abc,p));
+    }
+    
+    private static string removep(string xyz,int y){
+        
+        return xyz.Remove(y,1);
+    }
+}
+-----------------------------------
+# output:-
+---------
+-> dsghjk
